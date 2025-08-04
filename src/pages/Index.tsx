@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Users, Target, TrendingUp, Award, CheckCircle, Mail, Upload, FileText } from "lucide-react";
 import { useState } from "react";
+import impactSalesLogo from "@/assets/impact-sales-logo.png";
 
 const Index = () => {
   const [showJoinSteps, setShowJoinSteps] = useState(false);
@@ -21,8 +22,8 @@ const Index = () => {
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 bg-primary rounded-full"></div>
+            <div className="flex items-center space-x-3">
+              <img src={impactSalesLogo} alt="Impact Sales Group" className="h-10 w-10 object-contain" />
               <span className="text-xl font-bold text-primary">Impact Sales Group</span>
             </div>
             <nav className="hidden md:flex space-x-6">
@@ -336,8 +337,8 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="h-8 w-8 bg-primary rounded-full"></div>
+              <div className="flex items-center space-x-3 mb-4">
+                <img src={impactSalesLogo} alt="Impact Sales Group" className="h-10 w-10 object-contain" />
                 <span className="text-xl font-bold text-primary">Impact Sales Group</span>
               </div>
               <p className="text-muted-foreground">
@@ -364,7 +365,7 @@ const Index = () => {
           </div>
           
           <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 Impact Sales Group. All rights reserved.</p>
+            <p>&copy; 2025 Impact Sales Group. All rights reserved.</p>
           </div>
         </div>
       </footer>
