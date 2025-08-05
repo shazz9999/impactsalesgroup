@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Users, Target, TrendingUp, Award, CheckCircle, Mail, Upload, FileText } from "lucide-react";
 import { useState } from "react";
 import impactSalesLogo from "@/assets/impact-sales-logo.png";
+import rogersLogo from "@/assets/rogers-logo.png";
 
 const Index = () => {
   const [showJoinSteps, setShowJoinSteps] = useState(false);
@@ -286,8 +287,7 @@ const Index = () => {
           </p>
           <div className="flex justify-center items-center">
             <div className="bg-background p-8 rounded-lg shadow-sm border">
-              <div className="text-2xl font-bold text-red-600 mb-2">Rogers</div>
-              <p className="text-muted-foreground">Leading Canadian telecommunications company</p>
+              <img src={rogersLogo} alt="Rogers" className="h-16 mx-auto object-contain" />
             </div>
           </div>
         </div>
