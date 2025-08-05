@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Users, Target, TrendingUp, Award, CheckCircle, Mail, Upload, FileText } from "lucide-react";
 import { useState } from "react";
 import impactSalesLogo from "@/assets/impact-sales-logo.png";
-import rogersLogo from "@/assets/rogers-logo.png";
+import rogersLogo from "@/assets/rogers-logo.svg";
 
 const Index = () => {
   const [showJoinSteps, setShowJoinSteps] = useState(false);
