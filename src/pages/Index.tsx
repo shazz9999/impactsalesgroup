@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Users, Target, TrendingUp, Award, CheckCircle, Mail, Upload, FileText } from "lucide-react";
 import { useState } from "react";
-import impactSalesLogo from "@/assets/impact-sales-logo.png";
+import impactSalesLogo from "@/assets/impact-sales-logo-vibrant.png";
 import rogersLogo from "@/assets/rogers-logo.svg";
 
 const Index = () => {
@@ -286,8 +286,9 @@ const Index = () => {
             We proudly represent leading brands in direct sales campaigns
           </p>
           <div className="flex justify-center items-center">
-            <div className="bg-background p-8 rounded-lg shadow-sm border">
-              <img src={rogersLogo} alt="Rogers" className="h-16 mx-auto object-contain" />
+            <div className="bg-background p-8 rounded-lg shadow-sm border text-center">
+              <img src={rogersLogo} alt="Rogers" className="h-16 mx-auto object-contain mb-3" />
+              <p className="text-lg font-semibold text-foreground">Rogers</p>
             </div>
           </div>
         </div>
