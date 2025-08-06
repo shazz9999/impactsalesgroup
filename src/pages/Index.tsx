@@ -31,7 +31,7 @@ const Index = () => {
               <img src={impactSalesLogo} alt="Impact Sales Group" className="h-12 w-12 object-contain" />
               <div>
                 <span className="text-xl font-bold text-primary">Impact Sales Group</span>
-                <p className="text-xs text-muted-foreground">Authorized Rogers Partner</p>
+                <p className="text-xs text-muted-foreground">Direct Sales Excellence</p>
               </div>
             </div>
             <nav className="hidden md:flex space-x-8">
@@ -50,13 +50,13 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5"></div>
         <div className="container mx-auto text-center relative z-10">
           <Badge variant="secondary" className="mb-6 text-sm font-semibold px-4 py-2">
-            🏆 #1 Rogers Authorized Sales Partner in Ontario
+            🏆 #1 Direct Sales Team in Ontario
           </Badge>
           <h1 className="text-5xl md:text-7xl font-bold mb-8 gradient-text leading-tight">
-            Connect Rogers Services<br />with Real People
+            Direct Sales Excellence<br />Real Results
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-4xl mx-auto leading-relaxed">
-            We're the trusted door-to-door sales experts helping Rogers reach 500+ households weekly with phone plans, internet packages, and TV services that truly matter.
+            We're the trusted door-to-door sales experts reaching 500+ households weekly with products and services that truly matter to families.
           </p>
           <div className="flex items-center justify-center gap-6 mb-10 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
@@ -162,7 +162,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Who We Are</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The authentic face-to-face sales experts bringing Rogers' industry-leading services directly to Canadian families
+              The authentic face-to-face sales experts bringing industry-leading products and services directly to Canadian families
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -215,9 +215,9 @@ const Index = () => {
       <section id="services" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">What We Sell Door-to-Door</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Our Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Specialized in Rogers telecommunications - bringing cutting-edge connectivity solutions directly to Canadian households
+              Expert direct sales solutions bringing valuable products and services directly to Canadian households
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -226,26 +226,26 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl">Rogers Phone Plans</CardTitle>
-                <CardDescription className="text-base">Premium mobile connectivity for every lifestyle</CardDescription>
+                <CardTitle className="text-xl">Direct Sales</CardTitle>
+                <CardDescription className="text-base">Face-to-face sales excellence for every customer</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span className="font-medium">25% more plan sign-ups vs competitors</span>
+                    <span className="font-medium">25% higher conversion rates</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>Unlimited data & 5G coverage</span>
+                    <span>Personalized consultations</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>Family plan specialist consultations</span>
+                    <span>Expert product knowledge</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>Device upgrade assistance</span>
+                    <span>Follow-up support included</span>
                   </div>
                 </div>
               </CardContent>
@@ -256,26 +256,26 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Wifi className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl">Rogers Internet</CardTitle>
-                <CardDescription className="text-base">Lightning-fast fiber internet for modern homes</CardDescription>
+                <CardTitle className="text-xl">Customer Success</CardTitle>
+                <CardDescription className="text-base">Dedicated support throughout the entire process</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span className="font-medium">500+ households connected weekly</span>
+                    <span className="font-medium">500+ satisfied customers monthly</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>Gigabit speed consultations</span>
+                    <span>Complete needs assessment</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>Home network setup included</span>
+                    <span>Ongoing relationship management</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>Bundle savings optimization</span>
+                    <span>Post-sale follow-up support</span>
                   </div>
                 </div>
               </CardContent>
@@ -286,26 +286,26 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                   <Tv className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl">Rogers TV Packages</CardTitle>
-                <CardDescription className="text-base">Premium entertainment and sports programming</CardDescription>
+                <CardTitle className="text-xl">Training & Development</CardTitle>
+                <CardDescription className="text-base">Comprehensive training for sales excellence</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span className="font-medium">#1 in sports & premium content</span>
+                    <span className="font-medium">#1 training program in Ontario</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>4K streaming capabilities</span>
+                    <span>Advanced sales techniques</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>Personalized package design</span>
+                    <span>Ongoing mentorship program</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>Multi-room installation</span>
+                    <span>Career advancement paths</span>
                   </div>
                 </div>
               </CardContent>
@@ -460,15 +460,15 @@ const Index = () => {
                     <Quote className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <p className="text-lg italic mb-4 leading-relaxed">
-                        "Impact Sales Group helped us sign up over 200+ new Rogers customers in just one month. Their team's professionalism and authentic approach to door-to-door sales delivered results we never thought possible. Highly recommend for any telecommunications campaign."
+                        "The Impact Sales Group team was incredibly professional and knowledgeable. They took the time to understand our family's needs and found us the perfect package that actually saved us money. Their follow-up service has been exceptional too!"
                       </p>
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
-                          <span className="text-white font-bold">SM</span>
+                          <span className="text-white font-bold">MJ</span>
                         </div>
                         <div>
-                          <p className="font-bold">Sarah Mitchell</p>
-                          <p className="text-sm text-muted-foreground">Regional Sales Director, Rogers Partner Network</p>
+                          <p className="font-bold">Maria Johnson</p>
+                          <p className="text-sm text-muted-foreground">Satisfied Customer, Toronto</p>
                         </div>
                       </div>
                     </div>
@@ -534,11 +534,11 @@ const Index = () => {
                 <img src={impactSalesLogo} alt="Impact Sales Group" className="h-12 w-12 object-contain" />
                 <div>
                   <span className="text-2xl font-bold text-primary">Impact Sales Group</span>
-                  <p className="text-sm text-muted-foreground">Authorized Rogers Partner</p>
+                  <p className="text-sm text-muted-foreground">Direct Sales Excellence</p>
                 </div>
               </div>
               <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
-                Ontario's premier door-to-door sales specialists, connecting Rogers' world-class telecommunications services with families across the province through authentic, face-to-face conversations.
+                Ontario's premier door-to-door sales specialists, connecting families with valuable products and services through authentic, face-to-face conversations that build lasting relationships.
               </p>
               <div className="flex space-x-4">
                 <Button variant="outline" size="icon" asChild className="hover:bg-primary hover:text-primary-foreground">
@@ -591,10 +591,10 @@ const Index = () => {
             <div>
               <h3 className="font-bold text-lg mb-4 text-primary">Our Services</h3>
               <div className="space-y-2 text-muted-foreground mb-6">
-                <p className="hover:text-primary transition-colors cursor-pointer">Rogers Phone Plans</p>
-                <p className="hover:text-primary transition-colors cursor-pointer">High-Speed Internet</p>
-                <p className="hover:text-primary transition-colors cursor-pointer">Premium TV Packages</p>
-                <p className="hover:text-primary transition-colors cursor-pointer">Bundle Solutions</p>
+                <p className="hover:text-primary transition-colors cursor-pointer">Direct Sales</p>
+                <p className="hover:text-primary transition-colors cursor-pointer">Customer Success</p>
+                <p className="hover:text-primary transition-colors cursor-pointer">Training & Development</p>
+                <p className="hover:text-primary transition-colors cursor-pointer">Sales Excellence</p>
               </div>
               
               <h4 className="font-semibold mb-2">Legal</h4>
@@ -615,7 +615,7 @@ const Index = () => {
           <div className="border-t border-primary/20 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-muted-foreground text-center md:text-left">
-                &copy; 2025 Impact Sales Group. All rights reserved. | Authorized Rogers Partner
+                &copy; 2025 Impact Sales Group. All rights reserved. | Direct Sales Excellence
               </p>
               <div className="flex items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-1">
