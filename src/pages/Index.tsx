@@ -39,7 +39,7 @@ const Index = () => {
               <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">Services</a>
               <a href="#why-choose" className="text-foreground hover:text-primary transition-colors font-medium">Results</a>
               <a href="#join" className="text-foreground hover:text-primary transition-colors font-medium">Careers</a>
-              <a href="#clients" className="text-foreground hover:text-primary transition-colors font-medium">For Clients</a>
+              <a href="/for-clients" className="text-foreground hover:text-primary transition-colors font-medium">For Clients</a>
             </nav>
           </div>
         </div>
@@ -79,7 +79,7 @@ const Index = () => {
               <ChevronRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
             <Button variant="outline" size="lg" asChild className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-6 border-2 transition-all duration-300 hover:scale-105">
-              <a href="#clients">Partner With Us</a>
+              <a href="/for-clients">Partner With Us</a>
             </Button>
           </div>
         </div>
@@ -406,124 +406,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* For Clients Section */}
-      <section id="clients" className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Partner With Us</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Join industry leaders who trust us to deliver exceptional face-to-face sales results
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-3 gap-12 items-start">
-            {/* Performance Metrics */}
-            <div className="lg:col-span-2">
-              <h3 className="text-3xl font-bold mb-8 text-center lg:text-left">Performance That Speaks Volumes</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="card-hover p-6 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/20">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-bold text-lg">Conversion Rate</span>
-                    <Badge variant="secondary" className="text-lg px-4 py-2 bg-primary text-primary-foreground">25% Above Industry</Badge>
-                  </div>
-                  <p className="text-muted-foreground">Consistently outperform traditional sales methods</p>
-                </div>
-                
-                <div className="card-hover p-6 bg-gradient-to-br from-secondary/5 to-secondary/10 rounded-xl border border-secondary/20">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-bold text-lg">Client Retention</span>
-                    <Badge variant="secondary" className="text-lg px-4 py-2 bg-secondary text-secondary-foreground">92%</Badge>
-                  </div>
-                  <p className="text-muted-foreground">Long-term partnerships built on trust and results</p>
-                </div>
-                
-                <div className="card-hover p-6 bg-gradient-to-br from-primary/5 to-secondary/10 rounded-xl border border-primary/20">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-bold text-lg">ROI Improvement</span>
-                    <Badge variant="secondary" className="text-lg px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white">+150%</Badge>
-                  </div>
-                  <p className="text-muted-foreground">Proven return on investment for all campaigns</p>
-                </div>
-                
-                <div className="card-hover p-6 bg-gradient-to-br from-secondary/5 to-primary/10 rounded-xl border border-secondary/20">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-bold text-lg">Customer Satisfaction</span>
-                    <Badge variant="secondary" className="text-lg px-4 py-2 bg-gradient-to-r from-secondary to-primary text-white">4.9/5</Badge>
-                  </div>
-                  <p className="text-muted-foreground">Exceptional service quality every time</p>
-                </div>
-              </div>
-
-              {/* Testimonial */}
-              <Card className="mt-8 border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-secondary/5">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4">
-                    <Quote className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="text-lg italic mb-4 leading-relaxed">
-                        "The Impact Sales Group team was incredibly professional and knowledgeable. They took the time to understand our family's needs and found us the perfect package that actually saved us money. Their follow-up service has been exceptional too!"
-                      </p>
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
-                          <span className="text-white font-bold">MJ</span>
-                        </div>
-                        <div>
-                          <p className="font-bold">Maria Johnson</p>
-                          <p className="text-sm text-muted-foreground">Satisfied Customer, Toronto</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-            
-            {/* Consultation Card */}
-            <Card className="card-hover border-2 border-primary/20 shadow-xl">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle className="text-2xl">Free Strategic Consultation</CardTitle>
-                <CardDescription className="text-base">
-                  Discover how our proven face-to-face sales approach can accelerate your business growth
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>Custom sales strategy design</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>Territory analysis & planning</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>ROI projections & timelines</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>Team training & support</span>
-                  </div>
-                </div>
-                
-                <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-4 rounded-lg border border-primary/20">
-                  <p className="text-sm font-medium text-center">🎯 Typically see 25-40% increase in sales within first quarter</p>
-                </div>
-                
-                <Button asChild className="w-full text-lg py-6 shadow-lg">
-                  <a href="mailto:info@impactsalesgroup.net?subject=Partnership Consultation Request&body=Hi Impact Sales Group,%0D%0A%0D%0AI'm interested in learning more about your face-to-face sales services. Please contact me to schedule a consultation.%0D%0A%0D%0ACompany: %0D%0APhone: %0D%0ABest time to call: %0D%0A%0D%0AThank you!">
-                    Schedule Free Consultation
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-gradient-to-br from-card to-primary/5 border-t-2 border-primary/20 py-12 px-4">
