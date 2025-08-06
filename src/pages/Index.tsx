@@ -52,10 +52,11 @@ const Index = () => {
           <Badge variant="secondary" className="mb-6 text-sm font-semibold px-4 py-2">
             🏆 #1 Direct Sales Team in Ontario
           </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 gradient-text leading-tight">
-            Direct Sales Excellence<br />Real Results
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 gradient-text leading-tight break-words">
+            Direct Sales Excellence<br className="hidden sm:block" />
+            <span className="block sm:inline">Real Results</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-6 max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
             We're the trusted door-to-door sales experts reaching 500+ households weekly with products and services that truly matter to families.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-10 text-sm text-muted-foreground">
@@ -72,12 +73,12 @@ const Index = () => {
               <span>Real human connections</span>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" onClick={handleJoinTeam} className="text-lg px-10 py-6 shadow-lg hover:shadow-xl btn-pulse">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
+            <Button size="lg" onClick={handleJoinTeam} className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-6 shadow-lg hover:shadow-xl btn-pulse transition-all duration-300 hover:scale-105">
               Start Your Sales Career
-              <ChevronRight className="ml-2 h-5 w-5" />
+              <ChevronRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
-            <Button variant="outline" size="lg" asChild className="text-lg px-10 py-6 border-2">
+            <Button variant="outline" size="lg" asChild className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-6 border-2 transition-all duration-300 hover:scale-105">
               <a href="#clients">Partner With Us</a>
             </Button>
           </div>
@@ -159,50 +160,50 @@ const Index = () => {
       {/* About Section */}
       <section id="about" className="py-20 px-4 bg-card/50">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Who We Are</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="text-center mb-12 lg:mb-16 px-4 sm:px-0">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6 gradient-text break-words">Who We Are</h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               The authentic face-to-face sales experts bringing industry-leading products and services directly to Canadian families
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="card-hover border-2 border-primary/10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+            <Card className="card-hover border-2 border-primary/10 transition-all duration-300 hover:scale-105 group">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="h-8 w-8 text-white" />
+                <div className="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-r from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:rotate-12">
+                  <Shield className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl">Our Mission</CardTitle>
+                <CardTitle className="text-lg lg:text-xl break-words">Our Mission</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-sm lg:text-base">
                   Revolutionize door-to-door sales by building authentic human connections that deliver real value to every household we visit.
                 </p>
               </CardContent>
             </Card>
             
-            <Card className="card-hover border-2 border-secondary/20">
+            <Card className="card-hover border-2 border-secondary/20 transition-all duration-300 hover:scale-105 group">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="h-8 w-8 text-white" />
+                <div className="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:rotate-12">
+                  <TrendingUp className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl">Our Vision</CardTitle>
+                <CardTitle className="text-lg lg:text-xl break-words">Our Vision</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-sm lg:text-base">
                   To be Canada's most trusted face-to-face sales partner, known for integrity, innovation, and exceptional results.
                 </p>
               </CardContent>
             </Card>
             
-            <Card className="card-hover border-2 border-primary/10">
+            <Card className="card-hover border-2 border-primary/10 transition-all duration-300 hover:scale-105 group">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="h-8 w-8 text-white" />
+                <div className="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:rotate-12">
+                  <Award className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl">Our Values</CardTitle>
+                <CardTitle className="text-lg lg:text-xl break-words">Our Values</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-sm lg:text-base">
                   Authenticity in every conversation, excellence in every interaction, and genuine care for the families we serve.
                 </p>
               </CardContent>
@@ -214,13 +215,13 @@ const Index = () => {
       {/* Services Section */}
       <section id="services" className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Our Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="text-center mb-12 lg:mb-16 px-4 sm:px-0">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6 gradient-text break-words">Our Services</h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Expert direct sales solutions bringing valuable products and services directly to Canadian households
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
             <Card className="card-hover border-2 border-primary/10 bg-gradient-to-br from-card to-primary/5">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -323,7 +324,7 @@ const Index = () => {
               Real results that speak for themselves - backed by data and client success stories
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             <div className="card-hover p-6 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/20">
               <div className="bg-gradient-to-r from-primary to-primary/80 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <TrendingUp className="h-10 w-10 text-white" />
