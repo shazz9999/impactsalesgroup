@@ -58,7 +58,7 @@ const Index = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-4xl mx-auto leading-relaxed">
             We're the trusted door-to-door sales experts reaching 500+ households weekly with products and services that truly matter to families.
           </p>
-          <div className="flex items-center justify-center gap-6 mb-10 text-sm text-muted-foreground">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-10 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <CheckCircle className="h-4 w-4 text-primary" />
               <span>25% higher conversion rates</span>
@@ -367,7 +367,7 @@ const Index = () => {
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Authorized Rogers partner specializing in door-to-door sales of phone plans, internet packages, and TV services across Ontario
             </p>
-            <div className="flex justify-center items-center gap-6 text-sm text-muted-foreground">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-primary" />
                 <span>Authorized Partner Since 2020</span>
@@ -525,22 +525,22 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-br from-card to-primary/5 border-t-2 border-primary/20 py-16 px-4">
+      <footer className="bg-gradient-to-br from-card to-primary/5 border-t-2 border-primary/20 py-12 px-4">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             {/* Company Info */}
-            <div className="md:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
+            <div className="sm:col-span-2 lg:col-span-2">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-3 sm:space-y-0 sm:space-x-3 mb-6">
                 <img src={impactSalesLogo} alt="Impact Sales Group" className="h-12 w-12 object-contain" />
-                <div>
-                  <span className="text-2xl font-bold text-primary">Impact Sales Group</span>
+                <div className="text-center sm:text-left">
+                  <span className="text-xl sm:text-2xl font-bold text-primary block">Impact Sales Group</span>
                   <p className="text-sm text-muted-foreground">Direct Sales Excellence</p>
                 </div>
               </div>
-              <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
+              <p className="text-muted-foreground mb-6 max-w-md leading-relaxed text-center sm:text-left mx-auto sm:mx-0">
                 Ontario's premier door-to-door sales specialists, connecting families with valuable products and services through authentic, face-to-face conversations that build lasting relationships.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex justify-center sm:justify-start space-x-4">
                 <Button variant="outline" size="icon" asChild className="hover:bg-primary hover:text-primary-foreground">
                   <a href="#" aria-label="Facebook">
                     <Facebook className="h-4 w-4" />
@@ -565,45 +565,45 @@ const Index = () => {
             </div>
             
             {/* Contact Info */}
-            <div>
+            <div className="text-center sm:text-left">
               <h3 className="font-bold text-lg mb-4 text-primary">Contact Us</h3>
               <div className="space-y-3 text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <Mail className="h-4 w-4" />
-                  <a href="mailto:info@impactsalesgroup.net" className="hover:text-primary transition-colors">
+                <div className="flex items-center justify-center sm:justify-start gap-2">
+                  <Mail className="h-4 w-4 flex-shrink-0" />
+                  <a href="mailto:info@impactsalesgroup.net" className="hover:text-primary transition-colors break-all text-sm">
                     info@impactsalesgroup.net
                   </a>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Users className="h-4 w-4" />
-                  <a href="mailto:careers@impactsalesgroup.net" className="hover:text-primary transition-colors">
+                <div className="flex items-center justify-center sm:justify-start gap-2">
+                  <Users className="h-4 w-4 flex-shrink-0" />
+                  <a href="mailto:careers@impactsalesgroup.net" className="hover:text-primary transition-colors break-all text-sm">
                     careers@impactsalesgroup.net
                   </a>
                 </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4" />
+                <div className="flex items-center justify-center sm:justify-start gap-2">
+                  <MapPin className="h-4 w-4 flex-shrink-0" />
                   <span>Ontario, Canada</span>
                 </div>
               </div>
             </div>
             
             {/* Services & Legal */}
-            <div>
+            <div className="text-center sm:text-left">
               <h3 className="font-bold text-lg mb-4 text-primary">Our Services</h3>
               <div className="space-y-2 text-muted-foreground mb-6">
-                <p className="hover:text-primary transition-colors cursor-pointer">Direct Sales</p>
-                <p className="hover:text-primary transition-colors cursor-pointer">Customer Success</p>
-                <p className="hover:text-primary transition-colors cursor-pointer">Training & Development</p>
-                <p className="hover:text-primary transition-colors cursor-pointer">Sales Excellence</p>
+                <p className="hover:text-primary transition-colors cursor-pointer text-sm">Direct Sales</p>
+                <p className="hover:text-primary transition-colors cursor-pointer text-sm">Customer Success</p>
+                <p className="hover:text-primary transition-colors cursor-pointer text-sm">Training & Development</p>
+                <p className="hover:text-primary transition-colors cursor-pointer text-sm">Sales Excellence</p>
               </div>
               
               <h4 className="font-semibold mb-2">Legal</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
-                <a href="#" className="hover:text-primary transition-colors flex items-center gap-1">
+                <a href="#" className="hover:text-primary transition-colors flex items-center justify-center sm:justify-start gap-1">
                   Privacy Policy
                   <ExternalLink className="h-3 w-3" />
                 </a>
-                <a href="#" className="hover:text-primary transition-colors flex items-center gap-1">
+                <a href="#" className="hover:text-primary transition-colors flex items-center justify-center sm:justify-start gap-1">
                   Terms of Service
                   <ExternalLink className="h-3 w-3" />
                 </a>
@@ -612,12 +612,12 @@ const Index = () => {
           </div>
           
           {/* Bottom Section */}
-          <div className="border-t border-primary/20 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-muted-foreground text-center md:text-left">
+          <div className="border-t border-primary/20 pt-6">
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
+              <p className="text-muted-foreground text-center lg:text-left text-sm">
                 &copy; 2025 Impact Sales Group. All rights reserved. | Direct Sales Excellence
               </p>
-              <div className="flex items-center gap-4 text-sm text-muted-foreground">
+              <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-1">
                   <Shield className="h-4 w-4 text-primary" />
                   <span>Licensed & Insured</span>
