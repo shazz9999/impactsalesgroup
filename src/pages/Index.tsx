@@ -7,7 +7,7 @@ import {
   Facebook, Twitter, Linkedin, Instagram, ExternalLink, ChevronRight
 } from "lucide-react";
 import { useState } from "react";
-import impactSalesLogo from "@/assets/impact-sales-logo-vibrant.png";
+import impactSalesLogo from "@/assets/impact-sales-logo-red-black.png";
 import rogersLogo from "@/assets/rogers-logo.svg";
 
 const Index = () => {
