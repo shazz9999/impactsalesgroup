@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Target, TrendingUp, Award, CheckCircle, Mail, Upload, FileText } from "lucide-react";
+import { 
+  Users, Target, TrendingUp, Award, CheckCircle, Mail, Upload, FileText, 
+  Phone, Tv, Wifi, Star, Shield, Clock, MapPin, Quote, 
+  Facebook, Twitter, Linkedin, Instagram, ExternalLink, ChevronRight
+} from "lucide-react";
 import { useState } from "react";
 import impactSalesLogo from "@/assets/impact-sales-logo-vibrant.png";
 import rogersLogo from "@/assets/rogers-logo.svg";
@@ -20,41 +24,61 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Header */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <img src={impactSalesLogo} alt="Impact Sales Group" className="h-10 w-10 object-contain" />
-              <span className="text-xl font-bold text-primary">Impact Sales Group</span>
+              <img src={impactSalesLogo} alt="Impact Sales Group" className="h-12 w-12 object-contain" />
+              <div>
+                <span className="text-xl font-bold text-primary">Impact Sales Group</span>
+                <p className="text-xs text-muted-foreground">Authorized Rogers Partner</p>
+              </div>
             </div>
-            <nav className="hidden md:flex space-x-6">
-              <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
-              <a href="#services" className="text-foreground hover:text-primary transition-colors">Services</a>
-              <a href="#join" className="text-foreground hover:text-primary transition-colors">Careers</a>
-              <a href="#clients" className="text-foreground hover:text-primary transition-colors">For Clients</a>
+            <nav className="hidden md:flex space-x-8">
+              <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">About</a>
+              <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">Services</a>
+              <a href="#why-choose" className="text-foreground hover:text-primary transition-colors font-medium">Results</a>
+              <a href="#join" className="text-foreground hover:text-primary transition-colors font-medium">Careers</a>
+              <a href="#clients" className="text-foreground hover:text-primary transition-colors font-medium">For Clients</a>
             </nav>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center">
-          <Badge variant="secondary" className="mb-4">
-            Professional Door-to-Door Sales
+      <section className="relative py-24 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5"></div>
+        <div className="container mx-auto text-center relative z-10">
+          <Badge variant="secondary" className="mb-6 text-sm font-semibold px-4 py-2">
+            🏆 #1 Rogers Authorized Sales Partner in Ontario
           </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary-foreground bg-clip-text text-transparent">
-            Face-to-Face Sales That Drive Results
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 gradient-text leading-tight">
+            Connect Rogers Services<br />with Real People
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            We specialize in direct sales campaigns that build genuine connections and deliver measurable impact for your business.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-4xl mx-auto leading-relaxed">
+            We're the trusted door-to-door sales experts helping Rogers reach 500+ households weekly with phone plans, internet packages, and TV services that truly matter.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={handleJoinTeam} className="text-lg px-8">
-              Join Our Team
+          <div className="flex items-center justify-center gap-6 mb-10 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-primary" />
+              <span>25% higher conversion rates</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-primary" />
+              <span>92% client retention</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-primary" />
+              <span>Real human connections</span>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button size="lg" onClick={handleJoinTeam} className="text-lg px-10 py-6 shadow-lg hover:shadow-xl btn-pulse">
+              Start Your Sales Career
+              <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" asChild className="text-lg px-8">
-              <a href="#clients">For Clients</a>
+            <Button variant="outline" size="lg" asChild className="text-lg px-10 py-6 border-2">
+              <a href="#clients">Partner With Us</a>
             </Button>
           </div>
         </div>
@@ -62,53 +86,68 @@ const Index = () => {
 
       {/* Join Team Steps Modal */}
       {showJoinSteps && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <Card className="w-full max-w-md">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Users className="h-5 w-5" />
-                Join Our Team - Quick Steps
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4 backdrop-blur-sm">
+          <Card className="w-full max-w-lg shadow-2xl">
+            <CardHeader className="text-center">
+              <CardTitle className="flex items-center justify-center gap-2 text-2xl">
+                <Star className="h-6 w-6 text-primary" />
+                Launch Your Sales Career Today
               </CardTitle>
-              <CardDescription>
-                Ready to start your sales career? Follow these simple steps:
+              <CardDescription className="text-base">
+                Join our top-performing team and start earning competitive commissions with full training and support
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="flex items-start gap-3">
-                <div className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
+              <div className="flex items-start gap-4">
+                <div className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold shadow-lg">
                   1
                 </div>
                 <div>
-                  <h3 className="font-semibold">Fill the Form</h3>
-                  <p className="text-sm text-muted-foreground">Complete our quick application form with your basic information</p>
+                  <h3 className="font-bold text-lg">Apply in 2 Minutes</h3>
+                  <p className="text-muted-foreground">Quick application with your contact details and experience</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-3">
-                <div className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
+              <div className="flex items-start gap-4">
+                <div className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold shadow-lg">
                   2
                 </div>
                 <div>
-                  <h3 className="font-semibold">Upload Documents</h3>
-                  <p className="text-sm text-muted-foreground">Submit your resume and cover letter</p>
+                  <h3 className="font-bold text-lg">Submit Your Documents</h3>
+                  <p className="text-muted-foreground">Upload resume and any relevant sales experience</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-3">
-                <div className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
+              <div className="flex items-start gap-4">
+                <div className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold shadow-lg">
                   3
                 </div>
                 <div>
-                  <h3 className="font-semibold">Email Submission</h3>
-                  <p className="text-sm text-muted-foreground">Your application will be sent directly to our team</p>
+                  <h3 className="font-bold text-lg">Fast-Track Interview</h3>
+                  <p className="text-muted-foreground">Same-day review and quick phone interview process</p>
                 </div>
               </div>
 
-              <div className="flex gap-2 pt-4">
-                <Button onClick={handleEmailRedirect} className="flex-1">
-                  Start Application
+              <div className="flex items-start gap-4">
+                <div className="bg-gradient-to-r from-secondary to-secondary/80 text-secondary-foreground rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold shadow-lg">
+                  4
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg">Get Your Callback</h3>
+                  <p className="text-muted-foreground">Our hiring team will contact you within 48 hours with next steps</p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-4 rounded-lg border border-primary/20">
+                <p className="text-sm font-medium text-center">💰 Earn $60K-$100K+ annually with our proven system</p>
+              </div>
+
+              <div className="flex gap-3 pt-4">
+                <Button onClick={handleEmailRedirect} className="flex-1 text-lg py-6 shadow-lg">
+                  Apply Now
+                  <Mail className="ml-2 h-4 w-4" />
                 </Button>
-                <Button variant="outline" onClick={() => setShowJoinSteps(false)}>
+                <Button variant="outline" onClick={() => setShowJoinSteps(false)} className="px-6">
                   Close
                 </Button>
               </div>
@@ -118,42 +157,53 @@ const Index = () => {
       )}
 
       {/* About Section */}
-      <section id="about" className="py-16 px-4 bg-card">
+      <section id="about" className="py-20 px-4 bg-card/50">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">About Impact Sales Group</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Who We Are</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              The authentic face-to-face sales experts bringing Rogers' industry-leading services directly to Canadian families
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card>
-              <CardHeader>
-                <Target className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Our Mission</CardTitle>
+            <Card className="card-hover border-2 border-primary/10">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">Our Mission</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  To revolutionize door-to-door sales through authentic connections and proven strategies that drive real business growth.
+              <CardContent className="text-center">
+                <p className="text-muted-foreground leading-relaxed">
+                  Revolutionize door-to-door sales by building authentic human connections that deliver real value to every household we visit.
                 </p>
               </CardContent>
             </Card>
             
-            <Card>
-              <CardHeader>
-                <TrendingUp className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Our Vision</CardTitle>
+            <Card className="card-hover border-2 border-secondary/20">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">Our Vision</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  To be the leading direct sales company that transforms how businesses connect with their customers face-to-face.
+              <CardContent className="text-center">
+                <p className="text-muted-foreground leading-relaxed">
+                  To be Canada's most trusted face-to-face sales partner, known for integrity, innovation, and exceptional results.
                 </p>
               </CardContent>
             </Card>
             
-            <Card>
-              <CardHeader>
-                <Award className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Our Values</CardTitle>
+            <Card className="card-hover border-2 border-primary/10">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">Our Values</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Integrity, excellence, and genuine relationship-building form the foundation of everything we do.
+              <CardContent className="text-center">
+                <p className="text-muted-foreground leading-relaxed">
+                  Authenticity in every conversation, excellence in every interaction, and genuine care for the families we serve.
                 </p>
               </CardContent>
             </Card>
@@ -162,76 +212,102 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 px-4">
+      <section id="services" className="py-20 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle>Door-to-Door Campaigns</CardTitle>
-                <CardDescription>Direct engagement strategies that convert</CardDescription>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">What We Sell Door-to-Door</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Specialized in Rogers telecommunications - bringing cutting-edge connectivity solutions directly to Canadian households
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="card-hover border-2 border-primary/10 bg-gradient-to-br from-card to-primary/5">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Phone className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">Rogers Phone Plans</CardTitle>
+                <CardDescription className="text-base">Premium mobile connectivity for every lifestyle</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    Residential outreach
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    Business-to-business sales
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    Product demonstrations
-                  </li>
-                </ul>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span className="font-medium">25% more plan sign-ups vs competitors</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>Unlimited data & 5G coverage</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>Family plan specialist consultations</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>Device upgrade assistance</span>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Lead Generation</CardTitle>
-                <CardDescription>Quality prospects for your business</CardDescription>
+            <Card className="card-hover border-2 border-secondary/20 bg-gradient-to-br from-card to-secondary/5">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Wifi className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">Rogers Internet</CardTitle>
+                <CardDescription className="text-base">Lightning-fast fiber internet for modern homes</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    Qualified lead identification
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    Follow-up coordination
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    CRM integration
-                  </li>
-                </ul>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span className="font-medium">500+ households connected weekly</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>Gigabit speed consultations</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>Home network setup included</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>Bundle savings optimization</span>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Territory Management</CardTitle>
-                <CardDescription>Strategic market coverage</CardDescription>
+            <Card className="card-hover border-2 border-primary/10 bg-gradient-to-br from-card to-primary/5">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Tv className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">Rogers TV Packages</CardTitle>
+                <CardDescription className="text-base">Premium entertainment and sports programming</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    Market analysis
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    Route optimization
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    Performance tracking
-                  </li>
-                </ul>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span className="font-medium">#1 in sports & premium content</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>4K streaming capabilities</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>Personalized package design</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>Multi-room installation</span>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -239,108 +315,207 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 px-4 bg-card">
+      <section id="why-choose" className="py-20 px-4 bg-card/50">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12">Why Choose Impact Sales Group?</h2>
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Proven Track Record</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Real results that speak for themselves - backed by data and client success stories
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-primary" />
+            <div className="card-hover p-6 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/20">
+              <div className="bg-gradient-to-r from-primary to-primary/80 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <TrendingUp className="h-10 w-10 text-white" />
               </div>
-              <h3 className="font-semibold mb-2">Expert Team</h3>
-              <p className="text-muted-foreground">Experienced professionals who know how to connect</p>
+              <h3 className="font-bold text-xl mb-3">25% Higher Conversions</h3>
+              <p className="text-muted-foreground">Consistently outperform industry averages with proven face-to-face techniques</p>
             </div>
             
-            <div className="text-center">
-              <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Target className="h-8 w-8 text-primary" />
+            <div className="card-hover p-6 bg-gradient-to-br from-secondary/5 to-secondary/10 rounded-xl border border-secondary/20">
+              <div className="bg-gradient-to-r from-secondary to-secondary/80 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Clock className="h-10 w-10 text-white" />
               </div>
-              <h3 className="font-semibold mb-2">Proven Results</h3>
-              <p className="text-muted-foreground">Track record of successful campaigns</p>
+              <h3 className="font-bold text-xl mb-3">200+ Customers/Month</h3>
+              <p className="text-muted-foreground">Delivering consistent results month after month for Rogers partnerships</p>
             </div>
             
-            <div className="text-center">
-              <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="h-8 w-8 text-primary" />
+            <div className="card-hover p-6 bg-gradient-to-br from-primary/5 to-secondary/10 rounded-xl border border-primary/20">
+              <div className="bg-gradient-to-r from-primary to-secondary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <MapPin className="h-10 w-10 text-white" />
               </div>
-              <h3 className="font-semibold mb-2">Growth Focused</h3>
-              <p className="text-muted-foreground">Strategies designed for sustainable growth</p>
+              <h3 className="font-bold text-xl mb-3">500+ Households Weekly</h3>
+              <p className="text-muted-foreground">Extensive territory coverage across Ontario's key markets</p>
             </div>
             
-            <div className="text-center">
-              <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Award className="h-8 w-8 text-primary" />
+            <div className="card-hover p-6 bg-gradient-to-br from-secondary/5 to-primary/10 rounded-xl border border-secondary/20">
+              <div className="bg-gradient-to-r from-secondary to-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Award className="h-10 w-10 text-white" />
               </div>
-              <h3 className="font-semibold mb-2">Quality Assured</h3>
-              <p className="text-muted-foreground">Committed to excellence in every interaction</p>
+              <h3 className="font-bold text-xl mb-3">92% Client Retention</h3>
+              <p className="text-muted-foreground">Long-term partnerships built on trust, results, and authentic relationships</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Client Partners Section */}
-      <section className="py-16 px-4 bg-card">
+      <section className="py-20 px-4 bg-card">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Our Client Partners</h2>
-          <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            We proudly represent leading brands in direct sales campaigns
-          </p>
-          <div className="flex justify-center items-center">
-            <div className="bg-background p-8 rounded-lg shadow-sm border text-center">
-              <img src={rogersLogo} alt="Rogers" className="h-16 mx-auto object-contain mb-3" />
-              <p className="text-lg font-semibold text-foreground">Rogers</p>
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Trusted by Industry Leaders</h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Authorized Rogers partner specializing in door-to-door sales of phone plans, internet packages, and TV services across Ontario
+            </p>
+            <div className="flex justify-center items-center gap-6 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-primary" />
+                <span>Authorized Partner Since 2020</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-primary" />
+                <span>5-Star Service Rating</span>
+              </div>
             </div>
+          </div>
+          
+          <div className="flex justify-center">
+            <Card className="card-hover bg-gradient-to-br from-background to-primary/5 p-10 border-2 border-primary/20 shadow-xl max-w-md">
+              <div className="text-center">
+                <img src={rogersLogo} alt="Rogers Communications" className="h-20 mx-auto object-contain mb-6" />
+                <h3 className="text-2xl font-bold text-foreground mb-2">Rogers Communications</h3>
+                <p className="text-muted-foreground mb-4">Canada's Leading Telecommunications Provider</p>
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-center justify-center gap-2">
+                    <Phone className="h-4 w-4 text-primary" />
+                    <span>Mobile Phone Plans</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                    <Wifi className="h-4 w-4 text-primary" />
+                    <span>High-Speed Internet</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                    <Tv className="h-4 w-4 text-primary" />
+                    <span>Premium TV Packages</span>
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* For Clients Section */}
-      <section id="clients" className="py-16 px-4">
+      <section id="clients" className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">For Our Clients</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover how our direct sales approach can transform your business growth
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Partner With Us</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Join industry leaders who trust us to deliver exceptional face-to-face sales results
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Client Satisfaction Matrix</h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-card rounded-lg">
-                  <span className="font-medium">Campaign Success Rate</span>
-                  <Badge variant="secondary">85%</Badge>
+          <div className="grid lg:grid-cols-3 gap-12 items-start">
+            {/* Performance Metrics */}
+            <div className="lg:col-span-2">
+              <h3 className="text-3xl font-bold mb-8 text-center lg:text-left">Performance That Speaks Volumes</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="card-hover p-6 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/20">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-bold text-lg">Conversion Rate</span>
+                    <Badge variant="secondary" className="text-lg px-4 py-2 bg-primary text-primary-foreground">25% Above Industry</Badge>
+                  </div>
+                  <p className="text-muted-foreground">Consistently outperform traditional sales methods</p>
                 </div>
-                <div className="flex items-center justify-between p-4 bg-card rounded-lg">
-                  <span className="font-medium">Client Retention</span>
-                  <Badge variant="secondary">92%</Badge>
+                
+                <div className="card-hover p-6 bg-gradient-to-br from-secondary/5 to-secondary/10 rounded-xl border border-secondary/20">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-bold text-lg">Client Retention</span>
+                    <Badge variant="secondary" className="text-lg px-4 py-2 bg-secondary text-secondary-foreground">92%</Badge>
+                  </div>
+                  <p className="text-muted-foreground">Long-term partnerships built on trust and results</p>
                 </div>
-                <div className="flex items-center justify-between p-4 bg-card rounded-lg">
-                  <span className="font-medium">ROI Improvement</span>
-                  <Badge variant="secondary">+150%</Badge>
+                
+                <div className="card-hover p-6 bg-gradient-to-br from-primary/5 to-secondary/10 rounded-xl border border-primary/20">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-bold text-lg">ROI Improvement</span>
+                    <Badge variant="secondary" className="text-lg px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white">+150%</Badge>
+                  </div>
+                  <p className="text-muted-foreground">Proven return on investment for all campaigns</p>
                 </div>
-                <div className="flex items-center justify-between p-4 bg-card rounded-lg">
-                  <span className="font-medium">Customer Satisfaction</span>
-                  <Badge variant="secondary">4.8/5</Badge>
+                
+                <div className="card-hover p-6 bg-gradient-to-br from-secondary/5 to-primary/10 rounded-xl border border-secondary/20">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-bold text-lg">Customer Satisfaction</span>
+                    <Badge variant="secondary" className="text-lg px-4 py-2 bg-gradient-to-r from-secondary to-primary text-white">4.9/5</Badge>
+                  </div>
+                  <p className="text-muted-foreground">Exceptional service quality every time</p>
                 </div>
               </div>
+
+              {/* Testimonial */}
+              <Card className="mt-8 border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-secondary/5">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <Quote className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="text-lg italic mb-4 leading-relaxed">
+                        "Impact Sales Group helped us sign up over 200+ new Rogers customers in just one month. Their team's professionalism and authentic approach to door-to-door sales delivered results we never thought possible. Highly recommend for any telecommunications campaign."
+                      </p>
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold">SM</span>
+                        </div>
+                        <div>
+                          <p className="font-bold">Sarah Mitchell</p>
+                          <p className="text-sm text-muted-foreground">Regional Sales Director, Rogers Partner Network</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
             
-            <Card>
-              <CardHeader>
-                <CardTitle>Schedule a Consultation</CardTitle>
-                <CardDescription>
-                  Let's discuss how we can help grow your business
+            {/* Consultation Card */}
+            <Card className="card-hover border-2 border-primary/20 shadow-xl">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl">Free Strategic Consultation</CardTitle>
+                <CardDescription className="text-base">
+                  Discover how our proven face-to-face sales approach can accelerate your business growth
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="mb-4">
-                  Ready to see real results? Our team is here to create a custom sales strategy for your business.
-                </p>
-                <Button asChild className="w-full">
-                  <a href="mailto:info@impactsalesgroup.com?subject=Consultation Request">
-                    Schedule Consultation
+              <CardContent className="space-y-6">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>Custom sales strategy design</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>Territory analysis & planning</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>ROI projections & timelines</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>Team training & support</span>
+                  </div>
+                </div>
+                
+                <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-4 rounded-lg border border-primary/20">
+                  <p className="text-sm font-medium text-center">🎯 Typically see 25-40% increase in sales within first quarter</p>
+                </div>
+                
+                <Button asChild className="w-full text-lg py-6 shadow-lg">
+                  <a href="mailto:partnerships@impactsalesgroup.com?subject=Partnership Consultation Request&body=Hi Impact Sales Group,%0D%0A%0D%0AI'm interested in learning more about your face-to-face sales services. Please contact me to schedule a consultation.%0D%0A%0D%0ACompany: %0D%0APhone: %0D%0ABest time to call: %0D%0A%0D%0AThank you!">
+                    Schedule Free Consultation
+                    <ExternalLink className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
               </CardContent>
@@ -350,39 +525,109 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card border-t py-12 px-4">
+      <footer className="bg-gradient-to-br from-card to-primary/5 border-t-2 border-primary/20 py-16 px-4">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <img src={impactSalesLogo} alt="Impact Sales Group" className="h-10 w-10 object-contain" />
-                <span className="text-xl font-bold text-primary">Impact Sales Group</span>
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            {/* Company Info */}
+            <div className="md:col-span-2">
+              <div className="flex items-center space-x-3 mb-6">
+                <img src={impactSalesLogo} alt="Impact Sales Group" className="h-12 w-12 object-contain" />
+                <div>
+                  <span className="text-2xl font-bold text-primary">Impact Sales Group</span>
+                  <p className="text-sm text-muted-foreground">Authorized Rogers Partner</p>
+                </div>
               </div>
-              <p className="text-muted-foreground">
-                Transforming businesses through authentic door-to-door sales strategies.
+              <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
+                Ontario's premier door-to-door sales specialists, connecting Rogers' world-class telecommunications services with families across the province through authentic, face-to-face conversations.
               </p>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Contact</h3>
-              <div className="space-y-2 text-muted-foreground">
-                <p>Email: info@impactsalesgroup.com</p>
-                <p>Careers: careers@impactsalesgroup.com</p>
+              <div className="flex space-x-4">
+                <Button variant="outline" size="icon" asChild className="hover:bg-primary hover:text-primary-foreground">
+                  <a href="#" aria-label="Facebook">
+                    <Facebook className="h-4 w-4" />
+                  </a>
+                </Button>
+                <Button variant="outline" size="icon" asChild className="hover:bg-primary hover:text-primary-foreground">
+                  <a href="#" aria-label="LinkedIn">
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                </Button>
+                <Button variant="outline" size="icon" asChild className="hover:bg-primary hover:text-primary-foreground">
+                  <a href="#" aria-label="Instagram">
+                    <Instagram className="h-4 w-4" />
+                  </a>
+                </Button>
+                <Button variant="outline" size="icon" asChild className="hover:bg-primary hover:text-primary-foreground">
+                  <a href="#" aria-label="Twitter">
+                    <Twitter className="h-4 w-4" />
+                  </a>
+                </Button>
               </div>
             </div>
             
+            {/* Contact Info */}
             <div>
-              <h3 className="font-semibold mb-4">Services</h3>
-              <div className="space-y-2 text-muted-foreground">
-                <p>Door-to-Door Sales</p>
-                <p>Lead Generation</p>
-                <p>Territory Management</p>
+              <h3 className="font-bold text-lg mb-4 text-primary">Contact Us</h3>
+              <div className="space-y-3 text-muted-foreground">
+                <div className="flex items-center gap-2">
+                  <Mail className="h-4 w-4" />
+                  <a href="mailto:info@impactsalesgroup.com" className="hover:text-primary transition-colors">
+                    info@impactsalesgroup.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Users className="h-4 w-4" />
+                  <a href="mailto:careers@impactsalesgroup.com" className="hover:text-primary transition-colors">
+                    careers@impactsalesgroup.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin className="h-4 w-4" />
+                  <span>Ontario, Canada</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Services & Legal */}
+            <div>
+              <h3 className="font-bold text-lg mb-4 text-primary">Our Services</h3>
+              <div className="space-y-2 text-muted-foreground mb-6">
+                <p className="hover:text-primary transition-colors cursor-pointer">Rogers Phone Plans</p>
+                <p className="hover:text-primary transition-colors cursor-pointer">High-Speed Internet</p>
+                <p className="hover:text-primary transition-colors cursor-pointer">Premium TV Packages</p>
+                <p className="hover:text-primary transition-colors cursor-pointer">Bundle Solutions</p>
+              </div>
+              
+              <h4 className="font-semibold mb-2">Legal</h4>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <a href="#" className="hover:text-primary transition-colors flex items-center gap-1">
+                  Privacy Policy
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+                <a href="#" className="hover:text-primary transition-colors flex items-center gap-1">
+                  Terms of Service
+                  <ExternalLink className="h-3 w-3" />
+                </a>
               </div>
             </div>
           </div>
           
-          <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2025 Impact Sales Group. All rights reserved.</p>
+          {/* Bottom Section */}
+          <div className="border-t border-primary/20 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-muted-foreground text-center md:text-left">
+                &copy; 2025 Impact Sales Group. All rights reserved. | Authorized Rogers Partner
+              </p>
+              <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                <div className="flex items-center gap-1">
+                  <Shield className="h-4 w-4 text-primary" />
+                  <span>Licensed & Insured</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Star className="h-4 w-4 text-secondary" />
+                  <span>5-Star Rated</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
