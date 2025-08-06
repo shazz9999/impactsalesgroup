@@ -18,7 +18,7 @@ const Index = () => {
   };
 
   const handleEmailRedirect = () => {
-    window.location.href = "mailto:careers@impactsalesgroup.com?subject=Application - Door to Door Sales";
+    window.location.href = "mailto:careers@impactsalesgroup.net?subject=Application - Door to Door Sales";
   };
 
   return (
@@ -513,7 +513,7 @@ const Index = () => {
                 </div>
                 
                 <Button asChild className="w-full text-lg py-6 shadow-lg">
-                  <a href="mailto:partnerships@impactsalesgroup.com?subject=Partnership Consultation Request&body=Hi Impact Sales Group,%0D%0A%0D%0AI'm interested in learning more about your face-to-face sales services. Please contact me to schedule a consultation.%0D%0A%0D%0ACompany: %0D%0APhone: %0D%0ABest time to call: %0D%0A%0D%0AThank you!">
+                  <a href="mailto:info@impactsalesgroup.net?subject=Partnership Consultation Request&body=Hi Impact Sales Group,%0D%0A%0D%0AI'm interested in learning more about your face-to-face sales services. Please contact me to schedule a consultation.%0D%0A%0D%0ACompany: %0D%0APhone: %0D%0ABest time to call: %0D%0A%0D%0AThank you!">
                     Schedule Free Consultation
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </a>
@@ -570,14 +570,14 @@ const Index = () => {
               <div className="space-y-3 text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  <a href="mailto:info@impactsalesgroup.com" className="hover:text-primary transition-colors">
-                    info@impactsalesgroup.com
+                  <a href="mailto:info@impactsalesgroup.net" className="hover:text-primary transition-colors">
+                    info@impactsalesgroup.net
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Users className="h-4 w-4" />
-                  <a href="mailto:careers@impactsalesgroup.com" className="hover:text-primary transition-colors">
-                    careers@impactsalesgroup.com
+                  <a href="mailto:careers@impactsalesgroup.net" className="hover:text-primary transition-colors">
+                    careers@impactsalesgroup.net
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
