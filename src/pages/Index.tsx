@@ -9,6 +9,8 @@ import {
 import { useState } from "react";
 import impactSalesLogo from "@/assets/impact-sales-logo-red-black.png";
 import rogersLogo from "@/assets/rogers-logo.svg";
+import Navigation from "@/components/Navigation";
+import ServiceTabs from "@/components/ServiceTabs";
 
 const Index = () => {
   const [showJoinSteps, setShowJoinSteps] = useState(false);
@@ -23,27 +25,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
-      {/* Header */}
-      <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <img src={impactSalesLogo} alt="Impact Sales Group" className="h-12 w-12 object-contain" />
-              <div>
-                <span className="text-xl font-bold text-primary">Impact Sales Group</span>
-                <p className="text-xs text-muted-foreground">Direct Sales Excellence</p>
-              </div>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">About</a>
-              <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">Services</a>
-              <a href="#why-choose" className="text-foreground hover:text-primary transition-colors font-medium">Results</a>
-              <a href="#join" className="text-foreground hover:text-primary transition-colors font-medium">Careers</a>
-              <a href="/for-clients" className="text-foreground hover:text-primary transition-colors font-medium">For Clients</a>
-            </nav>
-          </div>
-        </div>
-      </header>
+      {/* Navigation */}
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative py-24 px-4 overflow-hidden">
@@ -406,6 +389,9 @@ const Index = () => {
         </div>
       </section>
 
+
+      {/* Services Section with Tabs */}
+      <ServiceTabs />
 
       {/* Footer */}
       <footer className="bg-gradient-to-br from-card to-primary/5 border-t-2 border-primary/20 py-12 px-4">
