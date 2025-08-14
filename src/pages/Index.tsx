@@ -465,7 +465,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center justify-center sm:justify-start gap-2">
                   <MapPin className="h-4 w-4 flex-shrink-0" />
-                  <span>Ontario, Canada</span>
+                  <span>Ottawa, Ontario, CA</span>
                 </div>
               </div>
             </div>
