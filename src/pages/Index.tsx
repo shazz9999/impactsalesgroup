@@ -74,7 +74,7 @@ const Index = () => {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
-            <Button size="lg" onClick={handleJoinTeam} className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-6 shadow-lg hover:shadow-xl btn-pulse transition-all duration-300 hover:scale-105">
+            <Button size="lg" onClick={handleJoinTeam} className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               Start Your Sales Career
               <ChevronRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
