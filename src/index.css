@@ -8,41 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 25% 98%;
-    --foreground: 215 25% 15%;
+    --background: 210 20% 98%;
+    --foreground: 210 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 210 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 210 20% 15%;
 
-    --primary: 0 84% 55%;
+    /* Teal primary color matching Mekael Consultants */
+    --primary: 184 100% 22%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
+    /* Gold accent color */
+    --secondary: 45 100% 51%;
+    --secondary-foreground: 210 20% 15%;
 
-    --muted: 215 20% 95%;
-    --muted-foreground: 215 15% 55%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 210 15% 55%;
 
-    --accent: 217 32% 92%;
-    --accent-foreground: 215 25% 15%;
+    --accent: 45 100% 96%;
+    --accent-foreground: 210 20% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 215 25% 88%;
-    --input: 215 25% 88%;
-    --ring: 217 91% 60%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 184 100% 22%;
 
     --radius: 0.75rem;
 
-    /* Enhanced design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(0 84% 55%), hsl(0 84% 65%));
-    --gradient-secondary: linear-gradient(135deg, hsl(0 0% 10%), hsl(0 0% 20%));
-    --shadow-elegant: 0 10px 30px -5px hsl(0 84% 55% / 0.3);
-    --shadow-card: 0 4px 20px -2px hsl(0 84% 55% / 0.15);
+    /* Enhanced design tokens with teal and gold theme */
+    --gradient-primary: linear-gradient(135deg, hsl(184 100% 22%), hsl(184 100% 32%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 100% 51%), hsl(45 100% 61%));
+    --shadow-elegant: 0 10px 30px -5px hsl(184 100% 22% / 0.3);
+    --shadow-card: 0 4px 20px -2px hsl(184 100% 22% / 0.15);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -56,39 +58,41 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 215 30% 8%;
-    --foreground: 215 15% 92%;
+    --background: 210 30% 8%;
+    --foreground: 210 15% 92%;
 
-    --card: 215 25% 12%;
-    --card-foreground: 215 15% 92%;
+    --card: 210 25% 12%;
+    --card-foreground: 210 15% 92%;
 
-    --popover: 215 25% 12%;
-    --popover-foreground: 215 15% 92%;
+    --popover: 210 25% 12%;
+    --popover-foreground: 210 15% 92%;
 
-    --primary: 0 84% 60%;
+    /* Darker teal for dark mode */
+    --primary: 184 100% 25%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 100%;
+    /* Darker gold for dark mode */
+    --secondary: 45 100% 48%;
+    --secondary-foreground: 210 20% 15%;
 
-    --muted: 215 25% 18%;
-    --muted-foreground: 215 15% 65%;
+    --muted: 210 25% 18%;
+    --muted-foreground: 210 15% 65%;
 
-    --accent: 215 25% 18%;
-    --accent-foreground: 215 15% 92%;
+    --accent: 210 25% 18%;
+    --accent-foreground: 210 15% 92%;
 
     --destructive: 0 62.8% 60%;
-    --destructive-foreground: 215 15% 92%;
+    --destructive-foreground: 210 15% 92%;
 
-    --border: 215 25% 22%;
-    --input: 215 25% 22%;
-    --ring: 217 91% 65%;
+    --border: 210 25% 22%;
+    --input: 210 25% 22%;
+    --ring: 184 100% 25%;
 
-    /* Dark mode enhancements */
-    --gradient-primary: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(0 0% 15%), hsl(0 0% 25%));
-    --shadow-elegant: 0 10px 30px -5px hsl(0 84% 60% / 0.4);
-    --shadow-card: 0 4px 20px -2px hsl(0 84% 60% / 0.25);
+    /* Dark mode enhancements with teal and gold */
+    --gradient-primary: linear-gradient(135deg, hsl(184 100% 25%), hsl(184 100% 35%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 100% 48%), hsl(45 100% 58%));
+    --shadow-elegant: 0 10px 30px -5px hsl(184 100% 25% / 0.4);
+    --shadow-card: 0 4px 20px -2px hsl(184 100% 25% / 0.25);
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;

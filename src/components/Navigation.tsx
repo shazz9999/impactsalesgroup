@@ -34,13 +34,13 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Main Navigation */}
-      <header className="bg-background border-b shadow-sm">
+      {/* Main Navigation - Professional teal background */}
+      <header className="bg-primary text-primary-foreground shadow-lg">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="text-2xl font-bold text-primary">
+              <div className="text-2xl font-bold text-primary-foreground">
                 Impact Sales
               </div>
             </div>
@@ -49,19 +49,19 @@ const Navigation = () => {
             <NavigationMenu>
               <NavigationMenuList className="flex items-center space-x-6">
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-foreground hover:text-primary">
+                  <NavigationMenuTrigger className="text-primary-foreground hover:text-secondary transition-colors">
                     HOME
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-foreground hover:text-primary">
+                  <NavigationMenuTrigger className="text-primary-foreground hover:text-secondary transition-colors">
                     ABOUT US
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-foreground hover:text-primary bg-primary/10 text-primary font-medium">
+                  <NavigationMenuTrigger className="text-primary-foreground hover:text-secondary bg-secondary text-secondary-foreground font-medium px-4 py-2 rounded-md">
                     SERVICES
                     <ChevronDown className="ml-1 h-4 w-4" />
                   </NavigationMenuTrigger>
@@ -98,31 +98,31 @@ const Navigation = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-foreground hover:text-primary">
+                  <NavigationMenuTrigger className="text-primary-foreground hover:text-secondary transition-colors">
                     PRICING
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-foreground hover:text-primary">
+                  <NavigationMenuTrigger className="text-primary-foreground hover:text-secondary transition-colors">
                     CONTACT
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-foreground hover:text-primary">
+                  <NavigationMenuTrigger className="text-primary-foreground hover:text-secondary transition-colors">
                     OUR PARTNERS
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Button variant="outline" className="ml-4">
+                  <Button variant="outline" className="ml-4 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                     PAY NOW
                   </Button>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Button className="ml-2 bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                  <Button className="ml-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-medium">
                     FREE CONSULTATION
                   </Button>
                 </NavigationMenuItem>
